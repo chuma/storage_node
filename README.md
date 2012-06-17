@@ -8,15 +8,20 @@ usage
 
 ### initialization
 
+```javascript
 var storage = require('storage');
     storage.init('path to data folder');
+```
 
 ### creating a branch
 
+```javascript
 storage.data.new('users');
+```
 
 ### adding data
 
+```javascript
 for (var i = 0; i < 10; i += 1) {
   var name = 'user_' + i;
   var age = i * 4;
@@ -25,6 +30,7 @@ for (var i = 0; i < 10; i += 1) {
     age: age
   });
 }
+```
 
 ### search syntax
 
@@ -38,14 +44,17 @@ p: [{gt: to_1}, {lt: to_2}]
 
 ### retrieving data
 
+```javascript
 storage.data.users.find({
   age: {gt: 8}
 }, function (found) {
   console.log(found);
 });
+```
 
 ### modifying data
 
+```javascript
 storage.data.users.modify({
   name: {eq: 'user_4'}
 }, {
@@ -53,15 +62,20 @@ storage.data.users.modify({
 }, function (found) {
   console.log(found);
 });
+```
 
 ### removing data
 
+```javascript
 storage.data.users.remove({
   age: [{gt: 4}, {lt: 16}]
 }, function (found) {
   console.log(found);
 });
+```
 
 ### saving changes
 
+```javascript
 storage.save();
+```
