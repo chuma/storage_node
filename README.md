@@ -34,12 +34,12 @@ for (var i = 0; i < 10; i += 1) {
 
 ### search syntax
 
- p: {'eq', to} equal to
- p: {'nq', to} not equal to
- p: {'gt', to} greater than
- p: {'lt', to} lower than
+ p: {'eq', to} equal to  
+ p: {'nq', to} not equal to  
+ p: {'gt', to} greater than  
+ p: {'lt', to} lower than  
 
-It is possible to specify a set of options to match:
+It is possible to specify a set of options to match:  
 p: [{gt: to_1}, {lt: to_2}]
 
 ### retrieving data
