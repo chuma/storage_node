@@ -10,8 +10,6 @@ p: [{gt: to_1}, {lt: to_2}]
 
 */
 
-var utils = require('./../../utils');
-
 var search = (function () {
   var options = {};
 

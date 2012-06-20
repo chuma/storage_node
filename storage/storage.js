@@ -1,7 +1,8 @@
 var fs = require('fs');
 var path = require('path');
 
-var utils = require('./../utils');
+var utils = require('utils');
+
 var file = require('./lib/file');
 var accessor = require('./lib/accessor');
 

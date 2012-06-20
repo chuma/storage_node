@@ -1,7 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 
-var utils = require('./../../utils');
+var utils = require('utils');
 
 var file = {
   loadData: function (location, data) {

@@ -1,5 +1,6 @@
 var search = require('./search');
-var utils = require('./../../utils');
+
+var utils = require('utils');
 
 var accessor = {
   find: function (set, options, callback) {
