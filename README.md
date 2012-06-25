@@ -10,7 +10,7 @@ usage
 
 ```javascript
 var storage = require('storage');
-    storage.init('path to data folder');
+    storage.init('path');
 ```
 
 ### creating a branch
