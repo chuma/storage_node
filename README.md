@@ -52,6 +52,8 @@ storage.data.users.find({
 });
 ```
 
+Remark: It is possible (in v0.1.1) by getting all the data of a certain type by calling: allUsers = storage.data.users.all();
+
 ### modifying data
 
 ```javascript

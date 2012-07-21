@@ -25,6 +25,9 @@ var storage = (function () {
     },
     modify: function (options, ob, callback) {
       accessor.modify(this, options, ob, callback);
+    },
+    all: function () {
+      return accessor.all(this);
     }
   };
 

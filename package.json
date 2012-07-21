@@ -4,7 +4,7 @@
   },
   "name": "storage",
   "description": "Simple JSON file storage module for node.js. It features a mongoDB inspired syntax and is purely asynchronous.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git://github.com/graczykr/storage_node.git"

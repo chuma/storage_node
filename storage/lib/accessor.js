@@ -38,6 +38,16 @@ var accessor = {
       }
       callback(found);
     });
+  },
+  // added in 0.1.1,  still thinking about whether it should be sync or not
+  all: function (set) {
+    var found = {};
+    for (var k in set) {
+      if (utils.isObject(set[k]) {
+        found[k] = utils.clone(set[k]);
+      }
+    }
+    return found;
   }
 };
 
