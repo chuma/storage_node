@@ -43,7 +43,7 @@ var accessor = {
   all: function (set) {
     var found = {};
     for (var k in set) {
-      if (utils.isObject(set[k]) {
+      if (utils.isObject(set[k])) {
         found[k] = utils.clone(set[k]);
       }
     }
