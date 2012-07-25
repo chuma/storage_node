@@ -14,6 +14,7 @@ var accessor = {
         }
       } else {
         len -= 1;
+        c -= 1;
       }
       c += 1;
       if (c == len) {
