@@ -52,7 +52,7 @@ storage.data.users.find({
 });
 ```
 
-Remark: It is possible (in v0.1.1) by getting all the data of a certain type by calling: allUsers = storage.data.users.all();
+Remark: It is possible (in v0.1.1) to get all the data of a certain type by calling: allUsers = storage.data.users.all();
 
 ### modifying data
 
