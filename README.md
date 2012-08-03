@@ -52,7 +52,44 @@ storage.data.users.find({
 });
 ```
 
-Remark: It is possible (in v0.1.1) to get all the data of a certain type by calling: allUsers = storage.data.users.all();
+Remark: It is possible (in v0.1.1) to get all the data of a certain type by calling: allUsers = storage.data.users.all(); Although keeping this function sync might appear to contradict with node's main principles it proves to be the right choice for the amount of data that is usually handled with storage.
+
+### more details on retrieving data (from v0.1.3 onwards)
+
+If no option matched (= no data was retrieved) found is set to null. This enables the following:
+
+```javascript
+storage.data.users.find({
+  age: {gt: 8}
+}, function (found) {
+  if (found) {
+    // we got something!
+  }
+});
+```
+
+If only one element was found accessing it directly is possible:
+
+```javascript
+storage.data.users.find({
+  age: {eg: 8}
+}, function (found) {
+  console.log(found.name);
+});
+```
+
+The id property is now directly attached to all of the retrieved elements:
+
+```javascript
+storage.data.users.find({
+  age: {lt: 12}
+}, function (found) {
+  for (var k in found) {
+    // access id either as "k" or as the object's "id" property
+    console.log(k + ' is the same as ' + found[k].id);
+  }
+});
+```
 
 ### modifying data
 
@@ -75,6 +112,8 @@ storage.data.users.remove({
   console.log(found);
 });
 ```
+
+Remark: It is possible in (v0.1.3) to remove all the data of a certain type by calling removedUsers = storage.data.users.clear();
 
 ### saving changes
 

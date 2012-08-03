@@ -28,6 +28,9 @@ var storage = (function () {
     },
     all: function () {
       return accessor.all(this);
+    },
+    clear: function () {
+      return accessor.clear(this);
     }
   };
 
