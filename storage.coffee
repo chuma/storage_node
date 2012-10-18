@@ -28,7 +28,8 @@ storage =
       @[category] = storage._operations # there might be a better way to access storage
   # db setup
   init: (location = 'data') ->
-    if fs.existsSync location
+    fExistsFunc = fs.existsSync || path.existsSync
+    if fExistsFunc location
       @_location = location
       file.loadData location, @data
       # attach db operations
