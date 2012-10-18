@@ -47,11 +47,12 @@ accessor =
       set
       options
       (found) ->
-        if found.id
-          delete set[found.id]
-        else
-          for k of found
-            delete set[k]
+        if found
+          if found.id
+            delete set[found.id]
+          else
+            for k of found
+              delete set[k]
         callback found
     )
   # making these async?
